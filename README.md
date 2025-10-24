@@ -3,7 +3,7 @@
 
 ---
 
-## 🧩 Descripción del proyecto
+## 🧩 Descripción
 
 Este proyecto implementa una **interfaz en Android Jetpack Compose** que permite **agregar, editar y eliminar cursos** de una lista.  
 La aplicación se basa en el patrón **MVVM**, utilizando un `ViewModel` (`CursosViewModel`) que administra el estado de los cursos mediante `mutableStateListOf` y `mutableStateOf`.
@@ -79,7 +79,7 @@ Cada vez que el usuario:
 
 Esto ocurre debido a **cómo Jetpack Compose maneja la recomposición y el rendering de listas grandes** en `LazyColumn`.
 
-**Explicación técnica:**
+**Explicación:**
 - `LazyColumn` solo *compone* los elementos visibles en pantalla para optimizar el rendimiento.  
 - Los elementos que están fuera del viewport (fuera de la vista) no se actualizan hasta que vuelven a entrar en el área visible.  
 - Por eso, si modificas un elemento que no está visible, el cambio no se refleja inmediatamente en pantalla… **hasta que haces scroll y Compose vuelve a "recomponer" ese ítem**.
